@@ -10,4 +10,5 @@ int main(void)
     /* strcspn counts the number of characters until it hits a '\r' or a '\n' (in other words, it finds the first '\r' or '\n'). If it doesn't hit anything, it stops at the '\0' (returning the length of the string). */
     name[strcspn(name, "\r\n")] = 0;
     printf("Hello, %s!\n", name);
+    return 0;
 }
