@@ -22,17 +22,17 @@ int main(void)
         }
         else
         {
-            //Remove newline and carrage return from variable
+            //Remove newline and carriage return from variable. We could remove spaces so if the user keys the credit card number in groups of 4 as some does, it would still work, but not requested.
             number[strcspn(number, "\r\n")] = 0;
             // Convert string to long int in base 10.
             cardnumber = strtoll(number, &end, 10);
         }
     }
-    while (end != number + strlen(number) || strlen(number) < 13 || strlen(number) > 16);
+    while (end != number + strlen(number));
 
     cardtype();
 
-    if (!strcmp(type, "INVALID"))
+    if (strcmp(type, "INVALID")) /* If type="INVALID" strcmp returns 0, so FALSE */
     {
         for (i = 0; i < strlen(number); i++)
         {
@@ -105,7 +105,7 @@ void cardtype(void)
                 }
             }
             break;
-        default:  /* We already checked that the lenght isn't < 13 or > 16 but the value could be 14 */
+        default:  /* If number lenght is 14 or < 13 or > 16 */
             strcpy(type, "INVALID");
     }
 }
