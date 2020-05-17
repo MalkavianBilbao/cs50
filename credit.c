@@ -41,8 +41,8 @@ int main(void)
             if (i % 2 == 1)
             {
                 num *= 2;
-                // At max, num could be 18 (9*2). If num > 10, substract 10 and add 1 is then equal to add his digits, wich is equal to substract 9 (10-1=9).
-                if (num > 10)
+                // At max, num could be 18 (9*2). If num > 9 it has got 2 digits, substract 10 and add 1 is then equal to add his digits, wich is equal to substract 9 (10-1=9).
+                if (num > 9)
                 {
                     num -= 9;
                 }
