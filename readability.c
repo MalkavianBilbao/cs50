@@ -56,7 +56,7 @@ int main(void)
     }
     else
     {
-        printf("Grade %.0f \n", grade);
+        printf("Grade %.0f\n", grade);
     }
 
     return 0;
