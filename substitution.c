@@ -54,7 +54,6 @@ bool repetitionornoalpha(char key[26])
         if (!isalpha(key[i]))
         {
             return 1;
-            break;
         }
         // We only need to compare each char with the next ones, since previous ones were already compared in previous iterations
         for (int j = i + 1; j < strlen(key); j++)
@@ -62,7 +61,6 @@ bool repetitionornoalpha(char key[26])
             if (key[i] == key[j])
             {
                 return 1;
-                break;
             }
         }
     }
