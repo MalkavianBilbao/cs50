@@ -11,7 +11,7 @@ int main(void)
 
     printf("Text: ");
     fgets(text, sizeof text, stdin);
-    //Remove newline and carriage return from variable. We could remove spaces so if the user keys the credit card number in groups of 4 as some does, it would still work, but not requested.
+    //Remove newline and carriage return from variable.
     text[strcspn(text, "\r\n")] = 0;
 
     for (int i = 0; i < strlen(text); i++)
